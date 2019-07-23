@@ -44,7 +44,7 @@ $data = array(
 // запрос
 $jout=Lpcrm::send($data, $idcrm, 'addNewOrder');
  $m1=$jout['status']; $m2=$jout['message']['0'];
-$m2.=", OrderID: {$jout['data']['0']['order_id']}"; $_SESSION['order_id']=$jout['data']['0']['order_id']; 
+$m2.=", OrderID: {$jout['data']['0']['order_id']}"; $_SESSION['orderid']=$jout['data']['0']['order_id']; 
 $mess="<tr><td><b>Ответ LP-СРМ:</b></td><td> {$m1},</td></tr><tr>\n<td><br>Сообщение LP-CRM: {$m2}</td></tr>";
 $crm_tele=	"<b>Ответ LP-СРМ:</b> {$m1}, {$m2}";
 $_SESSION['orderid']=$data['order_id'];
