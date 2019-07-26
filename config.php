@@ -1,8 +1,8 @@
 <?php  
 /* * * * * * * * * * * * * * * * * * * * * * * 
  * Configuration v.2.4 Lite for LandingPage:  *
- *           Created for config_v2           *
- *   Last edition by 08.02.2019, 18:03:22    *
+ *        Created for light.config_v2        *
+ *   Last edition by 26.07.2019, 18:25:09    *
  *               ip: 127.0.0.1               *
  * * * * * * * * * * * * * * * * * * * * * * */
 
@@ -138,6 +138,7 @@ $thanks3 = "Если вы ошиблись при заполнении форм�
 $upsel = "0";
 $ip_block = "";
 $crm = "";
+$key_product = "c68c61a4-d462-4a10-bc1d-637fb1666ccd";
 $skidka = 100-floor(($price_new/$price_old)*100);
 $currency=$valuta; $discount=$skidka;
 date_default_timezone_set ($timezone);
@@ -145,7 +146,7 @@ $header="Content-type: text/html;charset=utf-8\r\nFrom: {$sender}\r\n";
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * 
- *           Created for config_v2           *
+ *        Created for light.config_v2        *
  *            Powered by GreyGler            *
  *        https://greygler.github.io         *
  * * * * * * * * * * * * * * * * * * * * * * */

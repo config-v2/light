@@ -48,7 +48,7 @@ var youtubeWrapper = function (options) {
     var videoCounter = videoContainers.length;
 
     for(var i = 0; i < videoCounter; i++){
-        videoContainers[i].style.backgroundImage = 'url(http://i.ytimg.com/vi/' + videoContainers[i].id + '/hqdefault.jpg)';
+        videoContainers[i].style.backgroundImage = 'url(//i.ytimg.com/vi/' + videoContainers[i].id + '/hqdefault.jpg)';
         var play = document.createElement("div");
         play.setAttribute("class","play");
         videoContainers[i].appendChild(play);

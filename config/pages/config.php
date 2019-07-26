@@ -742,21 +742,22 @@ if ($button=="") echo $config['modal']['button']; else echo $button;	 ?>" placeh
 	   <span id="crmt" class="panel-heading-info hidden"><small>Есть не заполненные поля!</small></span>
       </h4>
   </div>
-  <div id="crm-block" class="panel-collapse collapse">
+   <div id="crm-block" class="panel-collapse collapse">
    <div class="panel-body">
 	  <fieldset>
 	     	 <legend><small>Интеграции с СРМ</small></legend>
     <div class="form-group">
     <label class="col-sm-3 control-label" for="crm">Ваша СРМ: </label><div class="col-sm-9">
-	 <select class="form-control" id="crm" name="crm" onchange="crmfunc(); return true;">
+	 <select class="form-control" id="crm" name="crm" onchange="crmfunc(this.value); return true;">
  
   <option <?php  if ($crm=='') echo "selected"; ?> value="">Не используется</option>
   <option <?php  if ($crm=='lpcrm') echo "selected"; ?> value="lpcrm">LP-CRM</option>
+  <option <?php  if ($crm=='crm1top') echo "selected"; ?> value="crm1top">CRM1.TOP</option>
   <option <?php  if ($crm=='eautopay') echo "selected"; ?> value="eautopay">e-autopay</option>
    </select></div></div>
    
-   <div <?php  if ($crm!='lpcrm') echo('class="hidden"'); ?> id="lpcrm"><?php  include('include/lpcrm.php'); ?></div>
-   <div  <?php  if ($crm!='eautopay') echo('class="hidden"'); ?> id="eautopay"><?php  include('include/eautopay.php'); ?> </div>
+   <div  id="crm_block"><?php  if ($crm!='') include('include/'.$crm.'.php'); ?></div>
+   
    
    
 		<!--

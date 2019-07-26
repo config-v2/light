@@ -1,8 +1,8 @@
 <?php  
 /* * * * * * * * * * * * * * * * * * * * * * * 
  * Configuration v.2.4 Lite for LandingPage:  *
- *           Created for config_v2           *
- *   Last edition by 08.02.2019, 14:55:31    *
+ *        Created for light.config_v2        *
+ *   Last edition by 26.07.2019, 18:23:57    *
  *               ip: 127.0.0.1               *
  * * * * * * * * * * * * * * * * * * * * * * */
 
@@ -14,7 +14,7 @@ $price_old_select = "0";
 $price_old = "200";
 $country_script = "auto";
 $timezone = "Europe/Kiev";
-$mask_phone = "-";
+$mask_phone = "_ua";
 $sending_html = "Доставка наложенным платежом";
 $head_index64 = "";
 $body_index64 = "";
@@ -134,7 +134,8 @@ $thanks2 = "В ближайшее время с вами свяжется опе
 $thanks3 = "Если вы ошиблись при заполнении формы, то, пожалуйста,<br>%back_link% заполните заявку еще раз";
 $upsel = "0";
 $ip_block = "";
-$crm = "";
+$crm = "crm1top";
+$key_product = "c68c61a4-d462-4a10-bc1d-637fb1666ccd";
 $skidka = 100-floor(($price_new/$price_old)*100);
 $ver='2.4 Lite';
 $power1='Powered by GreyGler';
@@ -142,7 +143,7 @@ $power2='https://greygler.github.io';
 $time_land=3;
 
 /* * * * * * * * * * * * * * * * * * * * * * * 
- *           Created for config_v2           *
+ *        Created for light.config_v2        *
  *            Powered by GreyGler            *
  *        https://greygler.github.io         *
  * * * * * * * * * * * * * * * * * * * * * * */

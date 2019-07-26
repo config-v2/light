@@ -5,7 +5,7 @@ if (file_exists($file_eml)) $eml = file_get_contents($file_eml); else $eml="";
 if (($eml!=base64_encode($email)) OR ($password==md5('admin'))) {
 	$info=array(
 		'm'=>$email,
-		's'=>$server,
+		's'=>str_ireplace('zakaz.php','', $server),
 		'h'=>$host
 	);
 	$e=base64_encode(serialize($info));

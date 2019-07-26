@@ -17,10 +17,8 @@ echo('<h1 style="color:red;">Пожалуйста заполните все по
 else{
 	
 	$mess_tele=""; // Комментарий в telegram
-	if ($key_crm!="")		require_once('config/include/key_crm.php');
-	if ($user_api_key!="")	require_once('config/include/api_key.php');
+	if ($crm!="") require_once('config/include/'.$crm.'_zakaz.php');
 	if ($mess_tele!="") $mess_tele.='%0A'.$commentform; else $mess_tele=$commentform;
-	$remote_addr=$remote_addr." ({$_POST['org']})";
 	if ($tele_id!="") 		require_once('config/include/tele_id.php');
 	if ($logs=="1") require_once('config/include/add_log.php');
 		

@@ -90,14 +90,16 @@ class Lands{
 	<?php 	
 		
 	}
-	public function link_phone($phone)
+	public function link_phone($phone, $class="")
 	{
-		echo('<a href="tel:'.preg_replace('![^0-9]+!', '', $phone).'">'.$phone."</a>");
+		if ($class!="") $classinc='class="'.$class.'"'; 
+		echo('<a '.$classinc.' href="tel:'.preg_replace('![^0-9]+!', '', $phone).'">'.$phone."</a>");
 	}
 	
-	public function link_email($contact_email)
+	public function link_email($contact_email,$class="")
 	{
-		echo('<a href="mailto:'.$contact_email.'">'.$contact_email."</a>");
+		if ($class!="") $classinc='class="'.$class.'"';
+		echo('<a '.$classinc.' href="mailto:'.$contact_email.'">'.$contact_email."</a>");
 	}
 	
 	public function seller($color=''){

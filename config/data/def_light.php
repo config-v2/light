@@ -1,7 +1,6 @@
 <? 		require_once("config/class/browser.class.php");
 		require_once("config/class/functions.class.php");
-		if ($_SESSION['referer']!="") $referer=$_SESSION['referer']; else
-		if ($_POST['referer']!="") $referer=$_POST['referer']; else $referer="Не определен.";
+		if ($_SESSION['referer']!="") $referer=$_SESSION['referer']; else $referer="Не определен.";
 		$browser_class = new Browser();
 		$browser=$browser_class->getBrowser()." v.".$browser_class->getVersion();
 

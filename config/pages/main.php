@@ -28,6 +28,25 @@
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
+	<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '399385763956536');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=399385763956536&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+
 	<style>
  .CodeMirror { height: auto; border: 1px solid #ddd; }
  .CodeMirror-scroll { max-height: 200px; }
@@ -64,7 +83,7 @@
       <li ><a data-toggle="modal" data-target="#pass" href="<?php echo  $config['menu_link']['pass'] ?>"><?php echo  $config['menu_name']['pass'] ?></a></li>
 	    <li ><a data-toggle="modal" data-target="#clear" href="<?php echo  $config['menu_link']['clear'] ?>"><?php echo  $config['menu_name']['clear'] ?></a></a></li>
       <li <?php  if ($_GET['page']=="help") echo('class="active"'); ?>><a  href="<?php echo  $config['menu_link']['help'] ?>"><?php echo  $config['menu_name']['help'] ?></a></li>
-		<li> <a href="<?php echo  $config['menu_link']['don'] ?>" onclick="runWfpWdgt();"><?php echo  $config['menu_name']['don'] ?></a></li>
+		<li> <a href="<?php echo  $config['menu_link']['don'] ?>" onclick="runWfpWdgt(); fbq('track', 'Donate');"><?php echo  $config['menu_name']['don'] ?></a></li>
       <li class="active"><a data-toggle="modal" data-target="#exit" href="<?php echo  $config['menu_link']['exit'] ?>"><i class="fa fa-power-off" aria-hidden="true"></i> <?php echo  $config['menu_name']['exit'] ?></a></li>
      </ul>
     </div><!--/.nav-collapse -->
