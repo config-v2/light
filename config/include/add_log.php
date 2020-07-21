@@ -3,6 +3,11 @@ $log_path="config/logs/";
 $year=date("Y");
 $month=date("m");
 $day=date("d").".php";
+$utm='<b>utm_source</b> : '  . $_SESSION['utms']['utm_source'].
+    '<br><b>utm_medium</b> : '  . $_SESSION['utms']['utm_medium'].
+    '<br><b>utm_term</b> : '    . $_SESSION['utms']['utm_term'].
+    '<br><b>utm_content</b> : ' . $_SESSION['utms']['utm_content'].
+    '<br><b>utm_campaign</b> : '. $_SESSION['utms']['utm_campaign'];
 if (!file_exists($log_path.$year)) mkdir($log_path.$year);
 if (!file_exists($log_path.$year."/".$month)) mkdir($log_path.$year."/".$month);
 if (file_exists($log_path.$year."/".$month."/".$day)) require_once($log_path.$year."/".$month."/".$day);
